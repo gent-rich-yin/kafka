@@ -6,7 +6,7 @@ build/
 build_eclipse/
 out/
 .gradle/
-.vscode/
+.vscode/*
 lib_managed/
 src_managed/
 project/boot/
@@ -63,3 +63,6 @@ storage/kafka-tiered-storage/
 docker/test/report_*.html
 kafka.Kafka
 __pycache__
+
+!.vscode/launch.json
+!.vscode/start-kraft-node.sh

@@ -1,0 +1,48 @@
+{
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "Kafka 3-node cluster",
+      "configurations": [
+        "Kafka node 1",
+        "Kafka node 2",
+        "Kafka node 3"
+      ]
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Kafka node 1",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "${workspaceFolder}/.vscode/start-kraft-node.sh config/kraft-quorum-1.properties /tmp/kraft-logs-1",
+      "cwd": "${workspaceFolder}",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "name": "Kafka node 2",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "${workspaceFolder}/.vscode/start-kraft-node.sh config/kraft-quorum-2.properties /tmp/kraft-logs-2",
+      "cwd": "${workspaceFolder}",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "name": "Kafka node 3",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "${workspaceFolder}/.vscode/start-kraft-node.sh config/kraft-quorum-3.properties /tmp/kraft-logs-3",
+      "cwd": "${workspaceFolder}",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    }
+  ]
+}
