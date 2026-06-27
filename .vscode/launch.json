@@ -43,6 +43,17 @@
         "reveal": "always",
         "panel": "dedicated"
       }
+    },
+    {
+      "name": "Run rich-cli",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "${workspaceFolder}/gradlew :rich-cli:run",
+      "cwd": "${workspaceFolder}",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     }
   ]
 }

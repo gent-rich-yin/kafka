@@ -70,6 +70,7 @@ object Kafka extends Logging {
   }
 
   def main(args: Array[String]): Unit = {
+    info("Rich version of Kafka =======================================")
     try {
       val serverProps = getPropsFromArgs(args)
       val server = buildServer(serverProps)

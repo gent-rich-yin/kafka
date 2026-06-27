@@ -694,6 +694,10 @@ subprojects {
     from javadoc.destinationDir
   }
 
+  if (project == rootProject) {
+    jar.dependsOn(':rich-cli:jar')
+  }
+
   task docsJar(dependsOn: javadocJar)
 
   // Consumed by root aggregatedJavadoc; mirrors compileClasspath.
